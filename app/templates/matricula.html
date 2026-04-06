@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Matrículas</title>
+
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<style>
+body { background:#f5f5f5; }
+.navbar { background:#1f1f1f; }
+.container { margin-top:60px; }
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark">
+<a class="navbar-brand" href="/">Sistema Acadêmico</a>
+</nav>
+
+<div class="container">
+
+<h2>Matrículas</h2>
+
+<table class="table table-bordered bg-white">
+<thead>
+<tr>
+<th>Pessoa</th>
+<th>Curso</th>
+<th>Data Início</th>
+<th>Previsão Término</th>
+</tr>
+</thead>
+
+<tbody>
+{% for m in matriculas %}
+<tr>
+<td>{{ m.pessoa }}</td>
+<td>{{ m.curso }}</td>
+<td>{{ m.data_inicio }}</td>
+<td>{{ m.data_previsao_termino }}</td>
+</tr>
+{% endfor %}
+</tbody>
+
+</table>
+
+<a href="/" class="text-dark">← Voltar</a>
+
+</div>
+
+</body>
+</html>

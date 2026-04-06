@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Instituições</title>
+
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<style>
+body { background:#f5f5f5; }
+.navbar { background:#1f1f1f; }
+.container { margin-top:60px; }
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark">
+<a class="navbar-brand" href="/">Sistema Acadêmico</a>
+</nav>
+
+<div class="container">
+
+<h2>Instituições de Ensino</h2>
+
+<table class="table table-bordered bg-white">
+<thead>
+<tr>
+<th>Nome</th>
+<th>Site</th>
+<th>Telefone</th>
+<th>Cidade</th>
+</tr>
+</thead>
+
+<tbody>
+{% for i in instituicoes %}
+<tr>
+<td>{{ i.nome }}</td>
+<td>{{ i.site }}</td>
+<td>{{ i.telefone }}</td>
+<td>{{ i.cidade }}</td>
+</tr>
+{% endfor %}
+</tbody>
+
+</table>
+
+<a href="/" class="text-dark">← Voltar</a>
+
+</div>
+
+</body>
+</html>

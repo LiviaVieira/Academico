@@ -139,3 +139,12 @@ class Ocorrencia(models.Model):
 
     def __str__(self):
         return self.descricao
+
+class CursoDisciplina(models.Model):
+    curso = models.ForeignKey(Curso, on_delete=models.CASCADE)
+    disciplina = models.ForeignKey(Disciplina, on_delete=models.CASCADE)
+    carga_horaria = models.IntegerField()
+    periodo = models.IntegerField()
+
+    def __str__(self):
+        return f"{self.curso} - {self.disciplina} (Período {self.periodo})"
